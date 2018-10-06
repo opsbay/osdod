@@ -7,10 +7,17 @@
 //
 
 import Foundation
+import AppKit
 
 class OSDODDelegate: NSObject, NSXPCListenerDelegate {
+    let osdod: OSDOD
+    
+    init(osdod: OSDOD) {
+        self.osdod = osdod
+    }
+    
     func listener(_ listener: NSXPCListener, shouldAcceptNewConnection newConnection: NSXPCConnection) -> Bool {
-        let exportedObject = OSDOD()
+        let exportedObject = osdod
         newConnection.exportedInterface = NSXPCInterface(with: OSDODProtocol.self)
         newConnection.exportedObject = exportedObject
         newConnection.resume()

@@ -9,5 +9,6 @@
 import Foundation
 
 @objc public protocol OSDODProtocol {
-    func upperCaseString(_ string: String, withReply reply: @escaping (String) -> Void)
+    func showOSD()
+    func hideOSD()
 }

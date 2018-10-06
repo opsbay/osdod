@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		C6A7B517216870AA0096ECC5 /* OSDView.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A7B516216870AA0096ECC5 /* OSDView.swift */; };
+		C6A7B519216870ED0096ECC5 /* OSDController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6A7B518216870ED0096ECC5 /* OSDController.swift */; };
 		C6CE20352168439500EC1AA3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CE20342168439500EC1AA3 /* main.swift */; };
 		C6CE203C216843C700EC1AA3 /* OSDODDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CE203B216843C700EC1AA3 /* OSDODDelegate.swift */; };
 		C6CE203E216843EC00EC1AA3 /* OSDOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CE203D216843EC00EC1AA3 /* OSDOD.swift */; };
@@ -37,6 +39,8 @@
 /* End PBXCopyFilesBuildPhase section */
 
 /* Begin PBXFileReference section */
+		C6A7B516216870AA0096ECC5 /* OSDView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSDView.swift; sourceTree = "<group>"; };
+		C6A7B518216870ED0096ECC5 /* OSDController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSDController.swift; sourceTree = "<group>"; };
 		C6CE20312168439500EC1AA3 /* osdod */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = osdod; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CE20342168439500EC1AA3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
 		C6CE203B216843C700EC1AA3 /* OSDODDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSDODDelegate.swift; sourceTree = "<group>"; };
@@ -92,6 +96,8 @@
 				C6CE20342168439500EC1AA3 /* main.swift */,
 				C6CE203B216843C700EC1AA3 /* OSDODDelegate.swift */,
 				C6CE203F2168440300EC1AA3 /* OSDODProtocol.swift */,
+				C6A7B516216870AA0096ECC5 /* OSDView.swift */,
+				C6A7B518216870ED0096ECC5 /* OSDController.swift */,
 			);
 			path = osdod;
 			sourceTree = "<group>";
@@ -185,6 +191,8 @@
 			files = (
 				C6CE203C216843C700EC1AA3 /* OSDODDelegate.swift in Sources */,
 				C6CE20402168440300EC1AA3 /* OSDODProtocol.swift in Sources */,
+				C6A7B519216870ED0096ECC5 /* OSDController.swift in Sources */,
+				C6A7B517216870AA0096ECC5 /* OSDView.swift in Sources */,
 				C6CE20352168439500EC1AA3 /* main.swift in Sources */,
 				C6CE203E216843EC00EC1AA3 /* OSDOD.swift in Sources */,
 			);

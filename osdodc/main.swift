@@ -12,9 +12,24 @@ let connection = NSXPCConnection(machServiceName: "me.yarotsky.osdod", options: 
 connection.remoteObjectInterface = NSXPCInterface(with: OSDODProtocol.self)
 connection.resume()
 
-let service = connection.synchronousRemoteObjectProxyWithErrorHandler() { error in print("Received error:", error) } as? OSDODProtocol
+let service = connection.synchronousRemoteObjectProxyWithErrorHandler() { error in print("Received error:", error) } as! OSDODProtocol
 
-service?.upperCaseString("hello XPC", withReply: { (response) in
-    
-    print("Response from XPC Service:", response)
-})
+let args = ProcessInfo.processInfo.arguments
+
+func printUsage() {
+    print("Usage:\n\t\(args[0]) show\n\t\(args[0]) hide")
+}
+
+if args.count < 2 {
+    printUsage()
+    exit(1)
+}
+
+if args[1] == "show" {
+    service.showOSD()
+} else if args[1] == "hide" {
+    service.hideOSD()
+} else {
+    printUsage()
+    exit(1)
+}
