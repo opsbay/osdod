@@ -8,10 +8,24 @@
 
 /* Begin PBXBuildFile section */
 		C6CE20352168439500EC1AA3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CE20342168439500EC1AA3 /* main.swift */; };
+		C6CE203C216843C700EC1AA3 /* OSDODDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CE203B216843C700EC1AA3 /* OSDODDelegate.swift */; };
+		C6CE203E216843EC00EC1AA3 /* OSDOD.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CE203D216843EC00EC1AA3 /* OSDOD.swift */; };
+		C6CE20402168440300EC1AA3 /* OSDODProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CE203F2168440300EC1AA3 /* OSDODProtocol.swift */; };
+		C6CE204A21684B5300EC1AA3 /* main.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CE204921684B5300EC1AA3 /* main.swift */; };
+		C6CE204F21684B6B00EC1AA3 /* OSDODProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = C6CE204E21684B6B00EC1AA3 /* OSDODProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
 		C6CE202F2168439500EC1AA3 /* CopyFiles */ = {
+			isa = PBXCopyFilesBuildPhase;
+			buildActionMask = 2147483647;
+			dstPath = /usr/share/man/man1/;
+			dstSubfolderSpec = 0;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 1;
+		};
+		C6CE204521684B5300EC1AA3 /* CopyFiles */ = {
 			isa = PBXCopyFilesBuildPhase;
 			buildActionMask = 2147483647;
 			dstPath = /usr/share/man/man1/;
@@ -25,10 +39,24 @@
 /* Begin PBXFileReference section */
 		C6CE20312168439500EC1AA3 /* osdod */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = osdod; sourceTree = BUILT_PRODUCTS_DIR; };
 		C6CE20342168439500EC1AA3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C6CE203B216843C700EC1AA3 /* OSDODDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSDODDelegate.swift; sourceTree = "<group>"; };
+		C6CE203D216843EC00EC1AA3 /* OSDOD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSDOD.swift; sourceTree = "<group>"; };
+		C6CE203F2168440300EC1AA3 /* OSDODProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSDODProtocol.swift; sourceTree = "<group>"; };
+		C6CE204121684A5100EC1AA3 /* me.yarotsky.osdod.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = me.yarotsky.osdod.plist; sourceTree = "<group>"; };
+		C6CE204721684B5300EC1AA3 /* osdodc */ = {isa = PBXFileReference; explicitFileType = "compiled.mach-o.executable"; includeInIndex = 0; path = osdodc; sourceTree = BUILT_PRODUCTS_DIR; };
+		C6CE204921684B5300EC1AA3 /* main.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = main.swift; sourceTree = "<group>"; };
+		C6CE204E21684B6B00EC1AA3 /* OSDODProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OSDODProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
 		C6CE202E2168439500EC1AA3 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6CE204421684B5300EC1AA3 /* Frameworks */ = {
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
@@ -41,7 +69,9 @@
 		C6CE20282168439500EC1AA3 = {
 			isa = PBXGroup;
 			children = (
+				C6CE204121684A5100EC1AA3 /* me.yarotsky.osdod.plist */,
 				C6CE20332168439500EC1AA3 /* osdod */,
+				C6CE204821684B5300EC1AA3 /* osdodc */,
 				C6CE20322168439500EC1AA3 /* Products */,
 			);
 			sourceTree = "<group>";
@@ -50,6 +80,7 @@
 			isa = PBXGroup;
 			children = (
 				C6CE20312168439500EC1AA3 /* osdod */,
+				C6CE204721684B5300EC1AA3 /* osdodc */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -57,9 +88,21 @@
 		C6CE20332168439500EC1AA3 /* osdod */ = {
 			isa = PBXGroup;
 			children = (
+				C6CE203D216843EC00EC1AA3 /* OSDOD.swift */,
 				C6CE20342168439500EC1AA3 /* main.swift */,
+				C6CE203B216843C700EC1AA3 /* OSDODDelegate.swift */,
+				C6CE203F2168440300EC1AA3 /* OSDODProtocol.swift */,
 			);
 			path = osdod;
+			sourceTree = "<group>";
+		};
+		C6CE204821684B5300EC1AA3 /* osdodc */ = {
+			isa = PBXGroup;
+			children = (
+				C6CE204E21684B6B00EC1AA3 /* OSDODProtocol.swift */,
+				C6CE204921684B5300EC1AA3 /* main.swift */,
+			);
+			path = osdodc;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -82,6 +125,23 @@
 			productReference = C6CE20312168439500EC1AA3 /* osdod */;
 			productType = "com.apple.product-type.tool";
 		};
+		C6CE204621684B5300EC1AA3 /* osdodc */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = C6CE204B21684B5300EC1AA3 /* Build configuration list for PBXNativeTarget "osdodc" */;
+			buildPhases = (
+				C6CE204321684B5300EC1AA3 /* Sources */,
+				C6CE204421684B5300EC1AA3 /* Frameworks */,
+				C6CE204521684B5300EC1AA3 /* CopyFiles */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = osdodc;
+			productName = osdodc;
+			productReference = C6CE204721684B5300EC1AA3 /* osdodc */;
+			productType = "com.apple.product-type.tool";
+		};
 /* End PBXNativeTarget section */
 
 /* Begin PBXProject section */
@@ -93,6 +153,9 @@
 				ORGANIZATIONNAME = "Vlad Yarotsky";
 				TargetAttributes = {
 					C6CE20302168439500EC1AA3 = {
+						CreatedOnToolsVersion = 10.0;
+					};
+					C6CE204621684B5300EC1AA3 = {
 						CreatedOnToolsVersion = 10.0;
 					};
 				};
@@ -110,6 +173,7 @@
 			projectRoot = "";
 			targets = (
 				C6CE20302168439500EC1AA3 /* osdod */,
+				C6CE204621684B5300EC1AA3 /* osdodc */,
 			);
 		};
 /* End PBXProject section */
@@ -119,7 +183,19 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C6CE203C216843C700EC1AA3 /* OSDODDelegate.swift in Sources */,
+				C6CE20402168440300EC1AA3 /* OSDODProtocol.swift in Sources */,
 				C6CE20352168439500EC1AA3 /* main.swift in Sources */,
+				C6CE203E216843EC00EC1AA3 /* OSDOD.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		C6CE204321684B5300EC1AA3 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				C6CE204A21684B5300EC1AA3 /* main.swift in Sources */,
+				C6CE204F21684B6B00EC1AA3 /* OSDODProtocol.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -259,6 +335,24 @@
 			};
 			name = Release;
 		};
+		C6CE204C21684B5300EC1AA3 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Debug;
+		};
+		C6CE204D21684B5300EC1AA3 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				CODE_SIGN_STYLE = Automatic;
+				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 4.2;
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -276,6 +370,15 @@
 			buildConfigurations = (
 				C6CE20392168439500EC1AA3 /* Debug */,
 				C6CE203A2168439500EC1AA3 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		C6CE204B21684B5300EC1AA3 /* Build configuration list for PBXNativeTarget "osdodc" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				C6CE204C21684B5300EC1AA3 /* Debug */,
+				C6CE204D21684B5300EC1AA3 /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;

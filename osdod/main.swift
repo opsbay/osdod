@@ -8,5 +8,9 @@
 
 import Foundation
 
-print("Hello, World!")
-
+let delegate = OSDODDelegate()
+let listener = NSXPCListener.init(machServiceName: "me.yarotsky.osdod")
+listener.delegate = delegate
+listener.resume()
+print("accepting requests")
+RunLoop.current.run()
