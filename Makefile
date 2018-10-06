@@ -15,6 +15,6 @@ clean:
 	rm -rf ./osdod.xcodeproj
 
 install: osdod osdodc
-	cp build/Release/osdod /usr/bin/
-	cp build/Release/osdodc /usr/bin/
+	cp build/Release/osdod /usr/local/bin/
+	cp build/Release/osdodc /usr/local/bin/
 	cp me.yarotsky.osdod.plist ~/Library/LaunchAgents/
