@@ -10,26 +10,70 @@ import Foundation
 import AppKit
 
 final class OSDController: NSObject, NSApplicationDelegate {
-    let window1 = NSWindow(contentRect: NSRect(x: 0, y: 0, width: NSScreen.main!.frame.maxX, height: NSScreen.main!.frame.maxY), styleMask: [.closable], backing: .buffered, defer: false)
+    var windows: [NSWindow]
+    var showing = false
+    
+    override init() {
+        windows = []
+        super.init()
+    }
     
     func applicationDidFinishLaunching(_ notification: Notification) {
-        let view1 = OSDView(frame: window1.frame)
-        window1.contentView = view1
-        window1.isOpaque = false
-        window1.hasShadow = false
-        window1.backgroundColor = NSColor(calibratedHue: 0, saturation: 1.0, brightness: 0, alpha: 0.5)
-        window1.level = .screenSaver
+        updateWindows()
     }
     
     func applicationWillTerminate(_ notification: Notification) {
     }
     
     func showOSD() {
-        window1.makeKeyAndOrderFront(self)
+        if (showing) {
+            return
+        }
+        NSLog("showOSD")
+        showing = true
+        
+        for (idx, window) in windows.enumerated() {
+            NSLog("show osd %d", idx)
+            window.makeKeyAndOrderFront(self)
+        }
         NSApp.activate(ignoringOtherApps: true)
     }
     
     func hideOSD() {
-        window1.orderOut(self)
+        if (!showing) {
+            return
+        }
+        NSLog("hideOSD")
+        showing = false
+        for window in windows {
+            window.orderOut(self)
+        }
+    }
+    
+    func updateWindows() {
+        NSLog("updateWindows")
+        let wasShowing = showing
+        hideOSD()
+        windows.removeAll()
+        for screen in NSScreen.screens {
+            let window = NSWindow(contentRect: screen.frame, styleMask: [.borderless], backing: .buffered, defer: false)
+            
+            let view = OSDView(frame: window.frame)
+            window.contentView = view
+            window.isOpaque = false
+            window.hasShadow = false
+            window.backgroundColor = NSColor(calibratedHue: 0, saturation: 1.0, brightness: 0, alpha: 0.5)
+            window.level = .screenSaver
+            
+            windows.append(window)
+        }
+        if (wasShowing) {
+            showOSD()
+        }
+    }
+    
+    func applicationDidChangeScreenParameters(_ notification: Notification) {
+        NSLog("screen conf changed")
+        updateWindows()
     }
 }
