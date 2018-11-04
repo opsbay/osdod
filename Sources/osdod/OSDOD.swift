@@ -17,11 +17,15 @@ class OSDOD: NSObject, OSDODProtocol {
     
     func showOSD() {
         NSLog("Showing OSD")
-        osdController.showOSD()
+        DispatchQueue.main.sync {
+            osdController.showOSD()
+        }
     }
     
     func hideOSD() {
         NSLog("Hiding OSD")
-        osdController.hideOSD()
+        DispatchQueue.main.sync {
+            osdController.hideOSD()
+        }
     }
 }
